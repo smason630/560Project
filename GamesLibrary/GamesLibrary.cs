@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GamesLibrary
 {
-    public partial class Form1 : Form
+    public partial class GamesLibrary : Form
     {
-        public Form1()
+        public GamesLibrary()
         {
             InitializeComponent();
         }
