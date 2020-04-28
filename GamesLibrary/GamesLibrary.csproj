@@ -64,6 +64,9 @@
     <Compile Include="GamesLibraryHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddView.resx">
+      <DependentUpon>AddView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GamesLibrary.resx">
       <DependentUpon>GamesLibrary.cs</DependentUpon>
     </EmbeddedResource>
