@@ -4,6 +4,16 @@
         <name>GamesLibrary</name>
     </assembly>
     <members>
+        <member name="T:GamesLibrary.AddView">
+            <summary>
+            Default implementation
+            </summary>
+        </member>
+        <member name="M:GamesLibrary.AddView.#ctor">
+            <summary>
+            Default implementation
+            </summary>
+        </member>
         <member name="F:GamesLibrary.AddView.components">
             <summary>
             Required designer variable.
@@ -19,6 +29,168 @@
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GamesLibrary.Models.Console">
+            <summary>
+            Console model
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Models.Console.ConsoleId">
+            <summary>
+            Console id
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Models.Console.Name">
+            <summary>
+            console name
+            </summary>
+        </member>
+        <member name="M:GamesLibrary.Models.Console.#ctor(System.Int32,System.String)">
+            <summary>
+            Console constructor
+            </summary>
+            <param name="i">console id</param>
+            <param name="n">console name</param>
+        </member>
+        <member name="T:GamesLibrary.Models.Genre">
+            <summary>
+            Console model
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Models.Genre.GenreId">
+            <summary>
+            Genre ID
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Models.Genre.Name">
+            <summary>
+            Genre Name
+            </summary>
+        </member>
+        <member name="M:GamesLibrary.Models.Genre.#ctor(System.Int32,System.String)">
+            <summary>
+            Genre Constructor
+            </summary>
+            <param name="i">genre id</param>
+            <param name="n">genre name</param>
+        </member>
+        <member name="T:GamesLibrary.Models.Publisher">
+            <summary>
+            Publisher Model
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Models.Publisher.PublisherId">
+            <summary>
+            Publisher ID
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Models.Publisher.Name">
+            <summary>
+            Publisher name
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Models.Publisher.Country">
+            <summary>
+            Publisher Country
+            </summary>
+        </member>
+        <member name="M:GamesLibrary.Models.Publisher.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Publisher Constructor
+            </summary>
+            <param name="i">publisher id</param>
+            <param name="n">publisher name</param>
+            <param name="c">publisher country</param>
+        </member>
+        <member name="T:GamesLibrary.Developer">
+            <summary>
+            Game developer model
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Developer.DeveloperId">
+            <summary>
+            dev id
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Developer.Name">
+            <summary>
+            developer name
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Developer.Country">
+            <summary>
+            developer country
+            </summary>
+        </member>
+        <member name="M:GamesLibrary.Developer.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            developer constructor
+            </summary>
+            <param name="i">dev id</param>
+            <param name="n">dev name</param>
+            <param name="c">dev country</param>
+        </member>
+        <member name="T:GamesLibrary.Game">
+            <summary>
+            game model
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Game.GameId">
+            <summary>
+            game id
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Game.Name">
+            <summary>
+            game name
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Game.Genre">
+            <summary>
+            game genre
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Game.Console">
+            <summary>
+            game console
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Game.Publisher">
+            <summary>
+            game publisher
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Game.Developer">
+            <summary>
+            game developer
+            </summary>
+        </member>
+        <member name="P:GamesLibrary.Game.ReleaseYear">
+            <summary>
+            game release year
+            </summary>
+        </member>
+        <member name="M:GamesLibrary.Game.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            game constructor
+            </summary>
+            <param name="i">game id int</param>
+            <param name="n">game name string</param>
+            <param name="g">game genre</param>
+            <param name="c">game console</param>
+            <param name="p">game publisher</param>
+            <param name="d">game developer</param>
+            <param name="y">game year</param>
+        </member>
+        <member name="T:GamesLibrary.GamesLibrary">
+            <summary>
+            Default implementation
+            </summary>
+        </member>
+        <member name="M:GamesLibrary.GamesLibrary.#ctor">
+            <summary>
+            Default implementation
             </summary>
         </member>
         <member name="F:GamesLibrary.GamesLibrary.components">
