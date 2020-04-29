@@ -21,7 +21,7 @@ namespace GamesLibrary
         /// </summary>
         static string ferncon = "Data Source=OMNIUS\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
         static string scottcon = "Data Source=PC\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
-        static string scottcon = "Data Source=PC\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
+        static string zackcon = "Data Source=LAPTOP-DEHCVF5M\\SQLEXPRESS;Initial Catalog=Master;Integrated Security=True";
         SqlConnection connection = new SqlConnection(ferncon);
         SqlDataAdapter adapter = new SqlDataAdapter();
         string query = "select * from GamesLibrary.Games";
