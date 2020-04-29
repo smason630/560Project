@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace GamesLibrary
 {
+    /// <summary>
+    /// Default implementation
+    /// </summary>
     public partial class AddView : Form
     {
+        /// <summary>
+        /// Default implementation
+        /// </summary>
         public AddView()
         {
             InitializeComponent();
