@@ -188,10 +188,22 @@
             Default implementation
             </summary>
         </member>
+        <member name="F:GamesLibrary.GamesLibrary.scottcon">
+            <summary>
+            global variables used for testing
+            </summary>
+        </member>
         <member name="M:GamesLibrary.GamesLibrary.#ctor">
             <summary>
             Default implementation
             </summary>
+        </member>
+        <member name="M:GamesLibrary.GamesLibrary.GamesLibrary_Load(System.Object,System.EventArgs)">
+            <summary>
+            doesnt do anything, fernando added this
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
         <member name="F:GamesLibrary.GamesLibrary.components">
             <summary>

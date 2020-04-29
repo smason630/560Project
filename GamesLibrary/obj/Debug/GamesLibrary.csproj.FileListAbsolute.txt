@@ -10,3 +10,15 @@ C:\Users\fvela\Source\Repos\560Project\GamesLibrary\obj\Debug\GamesLibrary.exe
 C:\Users\fvela\Source\Repos\560Project\GamesLibrary\obj\Debug\GamesLibrary.pdb
 C:\Users\fvela\Source\Repos\560Project\GamesLibrary\bin\Debug\GamesLibrary.xml
 C:\Users\fvela\Source\Repos\560Project\GamesLibrary\obj\Debug\GamesLibrary.csprojAssemblyReference.cache
+E:\560 Project\GamesLibrary\bin\Debug\GamesLibrary.exe.config
+E:\560 Project\GamesLibrary\bin\Debug\GamesLibrary.xml
+E:\560 Project\GamesLibrary\bin\Debug\GamesLibrary.exe
+E:\560 Project\GamesLibrary\bin\Debug\GamesLibrary.pdb
+E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.csprojAssemblyReference.cache
+E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.AddView.resources
+E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.GamesLibrary.resources
+E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.Properties.Resources.resources
+E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.csproj.GenerateResource.cache
+E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.csproj.CoreCompileInputs.cache
+E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.exe
+E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.pdb

@@ -19,12 +19,12 @@ namespace GamesLibrary
         /// <summary>
         /// global variables used for testing
         /// </summary>
+        static string scottcon = "Data Source=PC\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
         static string ferncon = "Data Source=OMNIUS\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
-        SqlConnection connection = new SqlConnection(ferncon);
+        static string zackcon = "Data Source=LAPTOP-DEHCVF5M\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
+        SqlConnection connection = new SqlConnection(scottcon);
         SqlDataAdapter adapter = new SqlDataAdapter();
         string query = "select * from GamesLibrary.Games";
-        public DataSet dataset = new DataSet();
-        public BindingSource bs = new BindingSource();
         /// <summary>
         /// Default implementation
         /// </summary>
@@ -39,10 +39,20 @@ namespace GamesLibrary
         /// <param name="e"></param>
         private void GamesLibrary_Load(object sender, EventArgs e)
         {
-            adapter.SelectCommand = new SqlCommand(query, connection);
-            adapter.Fill(dataset);
-            bs.DataSource = dataset;
-            UX_Table.DataSource = bs;
+            UX_Table.DataSource = GetDataSource();
+        }
+
+        private DataTable GetDataSource()
+        {
+            SqlCommand cmd = new SqlCommand(query, connection);
+            DataTable table = new DataTable();
+            using (connection)
+            {
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                table.Load(reader);
+            }
+            return table;
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,6 +63,10 @@ namespace GamesLibrary
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void UX_ResetButton_Click(object sender, EventArgs e)
+        {
         }
     }
 }
