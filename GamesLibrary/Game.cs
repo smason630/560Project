@@ -8,6 +8,7 @@ namespace GamesLibrary
 {
     class Game
     {
+        public int GameId { get; }
         private string Name { get; set; }
         private string Genre { get; set; }
         private string Console { get; set; }
@@ -15,8 +16,9 @@ namespace GamesLibrary
         private string Developer { get; set; }
         private int ReleaseYear { get; set; }
 
-        public Game(string n, string g, string c, string p, string d, int y)
+        public Game(int gameid, string n, string g, string c, string p, string d, int y)
         {
+            GameId = gameid;
             Name = n;
             Genre = g;
             Console = c;

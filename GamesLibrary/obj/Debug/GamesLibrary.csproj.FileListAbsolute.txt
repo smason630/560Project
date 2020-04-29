@@ -1,7 +1,6 @@
 C:\Users\fvela\Source\Repos\560Project\GamesLibrary\bin\Debug\GamesLibrary.exe.config
 C:\Users\fvela\Source\Repos\560Project\GamesLibrary\bin\Debug\GamesLibrary.exe
 C:\Users\fvela\Source\Repos\560Project\GamesLibrary\bin\Debug\GamesLibrary.pdb
-C:\Users\fvela\Source\Repos\560Project\GamesLibrary\obj\Debug\GamesLibrary.csprojAssemblyReference.cache
 C:\Users\fvela\Source\Repos\560Project\GamesLibrary\obj\Debug\GamesLibrary.AddView.resources
 C:\Users\fvela\Source\Repos\560Project\GamesLibrary\obj\Debug\GamesLibrary.GamesLibrary.resources
 C:\Users\fvela\Source\Repos\560Project\GamesLibrary\obj\Debug\GamesLibrary.Properties.Resources.resources
