@@ -22,3 +22,14 @@ E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.csproj.GenerateResource.cache
 E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.csproj.CoreCompileInputs.cache
 E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.exe
 E:\560 Project\GamesLibrary\obj\Debug\GamesLibrary.pdb
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\bin\Debug\GamesLibrary.exe.config
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\bin\Debug\GamesLibrary.xml
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\bin\Debug\GamesLibrary.exe
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\bin\Debug\GamesLibrary.pdb
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\obj\Debug\GamesLibrary.csprojAssemblyReference.cache
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\obj\Debug\GamesLibrary.AddView.resources
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\obj\Debug\GamesLibrary.GamesLibrary.resources
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\obj\Debug\GamesLibrary.Properties.Resources.resources
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\obj\Debug\GamesLibrary.csproj.GenerateResource.cache
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\obj\Debug\GamesLibrary.exe
+C:\Users\zackn\Documents\School\560\560Project\GamesLibrary\obj\Debug\GamesLibrary.pdb

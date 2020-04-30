@@ -30,7 +30,7 @@
         {
             this.UX_PublisherButton = new System.Windows.Forms.Button();
             this.UX_DeveloperButton = new System.Windows.Forms.Button();
-            this.UX_ResetButton = new System.Windows.Forms.Button();
+            this.UX_GamesButton = new System.Windows.Forms.Button();
             this.UX_SearchBar = new System.Windows.Forms.TextBox();
             this.UX_SearchButton = new System.Windows.Forms.Button();
             this.UX_Table = new System.Windows.Forms.DataGridView();
@@ -42,7 +42,7 @@
             // 
             // UX_PublisherButton
             // 
-            this.UX_PublisherButton.Location = new System.Drawing.Point(259, 26);
+            this.UX_PublisherButton.Location = new System.Drawing.Point(341, 28);
             this.UX_PublisherButton.Name = "UX_PublisherButton";
             this.UX_PublisherButton.Size = new System.Drawing.Size(75, 20);
             this.UX_PublisherButton.TabIndex = 2;
@@ -52,33 +52,33 @@
             // 
             // UX_DeveloperButton
             // 
-            this.UX_DeveloperButton.Location = new System.Drawing.Point(357, 26);
+            this.UX_DeveloperButton.Location = new System.Drawing.Point(435, 28);
             this.UX_DeveloperButton.Name = "UX_DeveloperButton";
             this.UX_DeveloperButton.Size = new System.Drawing.Size(75, 20);
             this.UX_DeveloperButton.TabIndex = 3;
             this.UX_DeveloperButton.Text = "Developer";
             this.UX_DeveloperButton.UseVisualStyleBackColor = true;
+            this.UX_DeveloperButton.Click += new System.EventHandler(this.UX_DeveloperButton_Click);
             // 
-            // UX_ResetButton
+            // UX_GamesButton
             // 
-            this.UX_ResetButton.Location = new System.Drawing.Point(779, 23);
-            this.UX_ResetButton.Name = "UX_ResetButton";
-            this.UX_ResetButton.Size = new System.Drawing.Size(75, 23);
-            this.UX_ResetButton.TabIndex = 4;
-            this.UX_ResetButton.Text = "Reset";
-            this.UX_ResetButton.UseVisualStyleBackColor = true;
-            this.UX_ResetButton.Click += new System.EventHandler(this.UX_ResetButton_Click);
+            this.UX_GamesButton.Location = new System.Drawing.Point(12, 29);
+            this.UX_GamesButton.Name = "UX_GamesButton";
+            this.UX_GamesButton.Size = new System.Drawing.Size(75, 21);
+            this.UX_GamesButton.TabIndex = 4;
+            this.UX_GamesButton.Text = "Games List";
+            this.UX_GamesButton.UseVisualStyleBackColor = true;
             // 
             // UX_SearchBar
             // 
-            this.UX_SearchBar.Location = new System.Drawing.Point(512, 26);
+            this.UX_SearchBar.Location = new System.Drawing.Point(662, 28);
             this.UX_SearchBar.Name = "UX_SearchBar";
             this.UX_SearchBar.Size = new System.Drawing.Size(100, 20);
             this.UX_SearchBar.TabIndex = 5;
             // 
             // UX_SearchButton
             // 
-            this.UX_SearchButton.Location = new System.Drawing.Point(618, 26);
+            this.UX_SearchButton.Location = new System.Drawing.Point(768, 27);
             this.UX_SearchButton.Name = "UX_SearchButton";
             this.UX_SearchButton.Size = new System.Drawing.Size(75, 20);
             this.UX_SearchButton.TabIndex = 6;
@@ -87,9 +87,12 @@
             // 
             // UX_Table
             // 
+            this.UX_Table.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.UX_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UX_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UX_Table.Location = new System.Drawing.Point(12, 76);
             this.UX_Table.Name = "UX_Table";
+            this.UX_Table.ReadOnly = true;
             this.UX_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.UX_Table.Size = new System.Drawing.Size(842, 368);
             this.UX_Table.TabIndex = 7;
@@ -98,7 +101,20 @@
             // 
             this.UX_GenreDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.UX_GenreDropDown.FormattingEnabled = true;
-            this.UX_GenreDropDown.Location = new System.Drawing.Point(12, 25);
+            this.UX_GenreDropDown.Items.AddRange(new object[] {
+            "Sports",
+            "Hack and slash",
+            "Action",
+            "Racing",
+            "Third-person shooter",
+            "Music",
+            "Puzzle",
+            "Adventure",
+            "Simulator",
+            "Platformer",
+            "Real Time Strategy",
+            "Action Role-Playing"});
+            this.UX_GenreDropDown.Location = new System.Drawing.Point(108, 29);
             this.UX_GenreDropDown.Name = "UX_GenreDropDown";
             this.UX_GenreDropDown.Size = new System.Drawing.Size(97, 21);
             this.UX_GenreDropDown.TabIndex = 9;
@@ -107,7 +123,30 @@
             // 
             this.UX_ConsoleDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.UX_ConsoleDropDown.FormattingEnabled = true;
-            this.UX_ConsoleDropDown.Location = new System.Drawing.Point(136, 25);
+            this.UX_ConsoleDropDown.Items.AddRange(new object[] {
+            "Atari 2600",
+            "Dreamcast",
+            "Gameboy",
+            "Gameboy Advance",
+            "Gameboy Color",
+            "Gamecube",
+            "HTC Vive",
+            "NES",
+            "Nintendo 64",
+            "Nintendo DS",
+            "Nintendo Switch",
+            "PC",
+            "Playstation",
+            "Playstation 2",
+            "Playstation 3",
+            "Playstation 4",
+            "Sega Genesis",
+            "Wii",
+            "Wii U",
+            "Xbox",
+            "Xbox 360",
+            "Xbox Series X"});
+            this.UX_ConsoleDropDown.Location = new System.Drawing.Point(226, 28);
             this.UX_ConsoleDropDown.Name = "UX_ConsoleDropDown";
             this.UX_ConsoleDropDown.Size = new System.Drawing.Size(97, 21);
             this.UX_ConsoleDropDown.TabIndex = 10;
@@ -125,6 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(866, 492);
             this.Controls.Add(this.UX_AddButton);
             this.Controls.Add(this.UX_ConsoleDropDown);
@@ -132,7 +172,7 @@
             this.Controls.Add(this.UX_Table);
             this.Controls.Add(this.UX_SearchButton);
             this.Controls.Add(this.UX_SearchBar);
-            this.Controls.Add(this.UX_ResetButton);
+            this.Controls.Add(this.UX_GamesButton);
             this.Controls.Add(this.UX_DeveloperButton);
             this.Controls.Add(this.UX_PublisherButton);
             this.Name = "GamesLibrary";
@@ -147,7 +187,7 @@
         #endregion
         private System.Windows.Forms.Button UX_PublisherButton;
         private System.Windows.Forms.Button UX_DeveloperButton;
-        private System.Windows.Forms.Button UX_ResetButton;
+        private System.Windows.Forms.Button UX_GamesButton;
         private System.Windows.Forms.TextBox UX_SearchBar;
         private System.Windows.Forms.Button UX_SearchButton;
         private System.Windows.Forms.DataGridView UX_Table;

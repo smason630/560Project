@@ -21,10 +21,10 @@ namespace GamesLibrary
         /// </summary>
         static string scottcon = "Data Source=PC\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
         static string ferncon = "Data Source=OMNIUS\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
-        static string zackcon = "Data Source=(localdb)\\MSSQLLocalDBInitial Catalog=TeamProject;Integrated Security=True";
-        SqlConnection connection = new SqlConnection(scottcon);
+        static string zackcon = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TeamProject;Integrated Security=True";
+        SqlConnection connection = new SqlConnection(zackcon);
         SqlDataAdapter adapter = new SqlDataAdapter();
-        string query = "select * from GamesLibrary.Games";
+        string query = "SELECT g.Name AS 'Genre Name' FROM GamesLibrary.Genre g";
         /// <summary>
         /// Default implementation
         /// </summary>
@@ -44,34 +44,31 @@ namespace GamesLibrary
 
         private DataTable GetDataSource(string sql)
         {
-            SqlCommand cmd = new SqlCommand(sql, connection);
             DataTable table = new DataTable();
-            using (connection)
-            {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                table.Load(reader);
-            }
+            connection.Open();
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(table);
+            UX_Table.DataSource = table;
+            connection.Close();
+
             return table;
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void UX_GamesButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UX_ResetButton_Click(object sender, EventArgs e)
-        {
+            UX_Table.DataSource = GetDataSource("SELECT g.Name AS 'Genre Name' FROM GamesLibrary.Genre g");
         }
 
         private void UX_PublisherButton_Click(object sender, EventArgs e)
         {
-            UX_Table.DataSource = GetDataSource("SELECT * FROM GamesLibrary.Publisher");
+            UX_Table.DataSource = GetDataSource("SELECT p.Name AS 'Publisher Name' FROM GamesLibrary.Publisher p");
+        }
+
+        private void UX_DeveloperButton_Click(object sender, EventArgs e)
+        {
+            UX_Table.DataSource = GetDataSource("SELECT d.Name AS 'Developer Name' FROM GamesLibrary.Developer d");
         }
     }
 }
