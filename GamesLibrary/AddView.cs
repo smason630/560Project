@@ -22,5 +22,7 @@ namespace GamesLibrary
         {
             InitializeComponent();
         }
+
+        // The add view should only show the inputs required based on the table that was open, if game was open it shows everything except country, if genre/console just name, if publisher/dev name and country
     }
 }
