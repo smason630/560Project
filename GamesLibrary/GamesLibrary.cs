@@ -88,19 +88,20 @@ namespace GamesLibrary
         private void UX_SearchButton_Click(object sender, EventArgs e)
         {
             string search = UX_SearchBar.Text;
+            string temp = "";
             //this switch might work for the search bar but it doesn't work now... not sure how to use a variable from c# in the sql command
-            /*switch(state)
+            switch(state)
             {
                 case 0:
-                    UX_Table.DataSource = GetDataSource("SELECT g.Name AS 'Genre Name' FROM GamesLibrary.Genre g WHERE CONTAINS (search)");
+                    uxTable.DataSource = GetDataSource("SELECT g.Name AS 'Game Name' FROM GamesLibrary.Games g WHERE [Name] LIKE '%" + search + "%'");
                     break;
                 case 1:
-                    UX_Table.DataSource = GetDataSource("SELECT p.Name AS 'Publisher Name' FROM GamesLibrary.Publisher p WHERE CONTAINS (search)");
+                    uxTable.DataSource = GetDataSource("SELECT p.Name AS 'Publisher Name' FROM GamesLibrary.Publisher p WHERE [Name] LIKE '%" + search + "%'");
                     break;
                 case 2:
-                    UX_Table.DataSource = GetDataSource("SELECT d.Name AS 'Developer Name' FROM GamesLibrary.Developer d WHERE CONTAINS (search)");
+                    uxTable.DataSource = GetDataSource("SELECT d.Name AS 'Developer Name' FROM GamesLibrary.Developer d WHERE [Name] LIKE '%" + search + "%'");
                     break;
-            }*/
+            }
         }
 
         private void UX_AddButton_Click(object sender, EventArgs e)
