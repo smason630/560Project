@@ -48,6 +48,7 @@
             this.UX_PublisherButton.TabIndex = 2;
             this.UX_PublisherButton.Text = "Publisher";
             this.UX_PublisherButton.UseVisualStyleBackColor = true;
+            this.UX_PublisherButton.Click += new System.EventHandler(this.UX_PublisherButton_Click);
             // 
             // UX_DeveloperButton
             // 
@@ -89,7 +90,7 @@
             this.UX_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UX_Table.Location = new System.Drawing.Point(12, 76);
             this.UX_Table.Name = "UX_Table";
-            this.UX_Table.RowHeadersWidth = 51;
+            this.UX_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.UX_Table.Size = new System.Drawing.Size(842, 368);
             this.UX_Table.TabIndex = 7;
             // 

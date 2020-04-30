@@ -39,12 +39,12 @@ namespace GamesLibrary
         /// <param name="e"></param>
         private void GamesLibrary_Load(object sender, EventArgs e)
         {
-            UX_Table.DataSource = GetDataSource();
+            UX_Table.DataSource = GetDataSource(query);
         }
 
-        private DataTable GetDataSource()
+        private DataTable GetDataSource(string sql)
         {
-            SqlCommand cmd = new SqlCommand(query, connection);
+            SqlCommand cmd = new SqlCommand(sql, connection);
             DataTable table = new DataTable();
             using (connection)
             {
@@ -67,6 +67,11 @@ namespace GamesLibrary
 
         private void UX_ResetButton_Click(object sender, EventArgs e)
         {
+        }
+
+        private void UX_PublisherButton_Click(object sender, EventArgs e)
+        {
+            UX_Table.DataSource = GetDataSource("SELECT * FROM GamesLibrary.Publisher");
         }
     }
 }
