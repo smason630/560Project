@@ -23,8 +23,8 @@ namespace GamesLibrary
         static string ferncon = "Data Source=OMNIUS\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
         static string zackcon = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TeamProject;Integrated Security=True";
         SqlConnection connection = new SqlConnection(zackcon);
-        SqlDataAdapter adapter = new SqlDataAdapter();
         string query = "SELECT g.Name AS 'Genre Name' FROM GamesLibrary.Genre g";
+        public int state = 0;
         /// <summary>
         /// Default implementation
         /// </summary>
@@ -47,7 +47,7 @@ namespace GamesLibrary
             DataTable table = new DataTable();
             connection.Open();
             SqlCommand cmd = new SqlCommand(sql, connection);
-            cmd.ExecuteNonQuery();
+            //cmd.ExecuteNonQuery();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(table);
             UX_Table.DataSource = table;
@@ -58,17 +58,38 @@ namespace GamesLibrary
 
         private void UX_GamesButton_Click(object sender, EventArgs e)
         {
+            state = 0;
             UX_Table.DataSource = GetDataSource("SELECT g.Name AS 'Genre Name' FROM GamesLibrary.Genre g");
         }
 
         private void UX_PublisherButton_Click(object sender, EventArgs e)
         {
+            state = 1;
             UX_Table.DataSource = GetDataSource("SELECT p.Name AS 'Publisher Name' FROM GamesLibrary.Publisher p");
         }
 
         private void UX_DeveloperButton_Click(object sender, EventArgs e)
         {
+            state = 2;
             UX_Table.DataSource = GetDataSource("SELECT d.Name AS 'Developer Name' FROM GamesLibrary.Developer d");
+        }
+
+        private void UX_SearchButton_Click(object sender, EventArgs e)
+        {
+            string search = UX_SearchBar.Text;
+            //this switch might work for the search bar but it doesn't work now... not sure how to use a variable from c# in the sql command
+            /*switch(state)
+            {
+                case 0:
+                    UX_Table.DataSource = GetDataSource("SELECT g.Name AS 'Genre Name' FROM GamesLibrary.Genre g WHERE CONTAINS (search)");
+                    break;
+                case 1:
+                    UX_Table.DataSource = GetDataSource("SELECT p.Name AS 'Publisher Name' FROM GamesLibrary.Publisher p WHERE CONTAINS (search)");
+                    break;
+                case 2:
+                    UX_Table.DataSource = GetDataSource("SELECT d.Name AS 'Developer Name' FROM GamesLibrary.Developer d WHERE CONTAINS (search)");
+                    break;
+            }*/
         }
     }
 }

@@ -84,6 +84,7 @@
             this.UX_SearchButton.TabIndex = 6;
             this.UX_SearchButton.Text = "Search";
             this.UX_SearchButton.UseVisualStyleBackColor = true;
+            this.UX_SearchButton.Click += new System.EventHandler(this.UX_SearchButton_Click);
             // 
             // UX_Table
             // 
