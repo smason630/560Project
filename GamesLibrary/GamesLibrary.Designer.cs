@@ -33,11 +33,11 @@
             this.UX_GamesButton = new System.Windows.Forms.Button();
             this.UX_SearchBar = new System.Windows.Forms.TextBox();
             this.UX_SearchButton = new System.Windows.Forms.Button();
-            this.UX_Table = new System.Windows.Forms.DataGridView();
             this.UX_GenreDropDown = new System.Windows.Forms.ComboBox();
             this.UX_ConsoleDropDown = new System.Windows.Forms.ComboBox();
             this.UX_AddButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.UX_Table)).BeginInit();
+            this.uxTable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.uxTable)).BeginInit();
             this.SuspendLayout();
             // 
             // UX_PublisherButton
@@ -68,6 +68,7 @@
             this.UX_GamesButton.TabIndex = 4;
             this.UX_GamesButton.Text = "Games List";
             this.UX_GamesButton.UseVisualStyleBackColor = true;
+            this.UX_GamesButton.Click += new System.EventHandler(this.UX_GamesButton_Click);
             // 
             // UX_SearchBar
             // 
@@ -85,18 +86,6 @@
             this.UX_SearchButton.Text = "Search";
             this.UX_SearchButton.UseVisualStyleBackColor = true;
             this.UX_SearchButton.Click += new System.EventHandler(this.UX_SearchButton_Click);
-            // 
-            // UX_Table
-            // 
-            this.UX_Table.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.UX_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UX_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UX_Table.Location = new System.Drawing.Point(12, 76);
-            this.UX_Table.Name = "UX_Table";
-            this.UX_Table.ReadOnly = true;
-            this.UX_Table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.UX_Table.Size = new System.Drawing.Size(842, 368);
-            this.UX_Table.TabIndex = 7;
             // 
             // UX_GenreDropDown
             // 
@@ -162,16 +151,25 @@
             this.UX_AddButton.UseVisualStyleBackColor = true;
             this.UX_AddButton.Click += new System.EventHandler(this.UX_AddButton_Click);
             // 
+            // uxTable
+            // 
+            this.uxTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxTable.Location = new System.Drawing.Point(12, 66);
+            this.uxTable.Name = "uxTable";
+            this.uxTable.ReadOnly = true;
+            this.uxTable.Size = new System.Drawing.Size(750, 414);
+            this.uxTable.TabIndex = 13;
+            // 
             // GamesLibrary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(866, 492);
+            this.Controls.Add(this.uxTable);
             this.Controls.Add(this.UX_AddButton);
             this.Controls.Add(this.UX_ConsoleDropDown);
             this.Controls.Add(this.UX_GenreDropDown);
-            this.Controls.Add(this.UX_Table);
             this.Controls.Add(this.UX_SearchButton);
             this.Controls.Add(this.UX_SearchBar);
             this.Controls.Add(this.UX_GamesButton);
@@ -180,7 +178,7 @@
             this.Name = "GamesLibrary";
             this.Text = "Games";
             this.Load += new System.EventHandler(this.GamesLibrary_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.UX_Table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,10 +190,10 @@
         private System.Windows.Forms.Button UX_GamesButton;
         private System.Windows.Forms.TextBox UX_SearchBar;
         private System.Windows.Forms.Button UX_SearchButton;
-        private System.Windows.Forms.DataGridView UX_Table;
         private System.Windows.Forms.ComboBox UX_GenreDropDown;
         private System.Windows.Forms.ComboBox UX_ConsoleDropDown;
         private System.Windows.Forms.Button UX_AddButton;
+        private System.Windows.Forms.DataGridView uxTable;
     }
 }
 
