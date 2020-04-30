@@ -193,6 +193,11 @@
             global variables used for testing
             </summary>
         </member>
+        <member name="F:GamesLibrary.GamesLibrary.state">
+            <summary>
+            int used to see which table we are at for the search or add function
+            </summary>
+        </member>
         <member name="M:GamesLibrary.GamesLibrary.#ctor">
             <summary>
             Default implementation

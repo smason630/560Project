@@ -160,6 +160,7 @@
             this.UX_AddButton.TabIndex = 11;
             this.UX_AddButton.Text = "Add";
             this.UX_AddButton.UseVisualStyleBackColor = true;
+            this.UX_AddButton.Click += new System.EventHandler(this.UX_AddButton_Click);
             // 
             // GamesLibrary
             // 
