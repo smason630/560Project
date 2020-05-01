@@ -28,164 +28,165 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.uxName = new System.Windows.Forms.TextBox();
+            this.uxConsole = new System.Windows.Forms.TextBox();
+            this.uxGenre = new System.Windows.Forms.TextBox();
+            this.uxYear = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelConsole = new System.Windows.Forms.Label();
+            this.labelGenre = new System.Windows.Forms.Label();
+            this.labelYear = new System.Windows.Forms.Label();
+            this.uxSubmit = new System.Windows.Forms.Button();
+            this.labelCountry = new System.Windows.Forms.Label();
+            this.uxCountry = new System.Windows.Forms.TextBox();
+            this.uxPub = new System.Windows.Forms.TextBox();
+            this.uxDev = new System.Windows.Forms.TextBox();
+            this.labelPub = new System.Windows.Forms.Label();
+            this.labelDev = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // uxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.uxName.Location = new System.Drawing.Point(55, 50);
+            this.uxName.Name = "uxName";
+            this.uxName.Size = new System.Drawing.Size(100, 20);
+            this.uxName.TabIndex = 0;
             // 
-            // textBox2
+            // uxConsole
             // 
-            this.textBox2.Location = new System.Drawing.Point(225, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.uxConsole.Location = new System.Drawing.Point(225, 49);
+            this.uxConsole.Name = "uxConsole";
+            this.uxConsole.Size = new System.Drawing.Size(100, 20);
+            this.uxConsole.TabIndex = 1;
             // 
-            // textBox3
+            // uxGenre
             // 
-            this.textBox3.Location = new System.Drawing.Point(400, 49);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.uxGenre.Location = new System.Drawing.Point(400, 49);
+            this.uxGenre.Name = "uxGenre";
+            this.uxGenre.Size = new System.Drawing.Size(100, 20);
+            this.uxGenre.TabIndex = 2;
             // 
-            // textBox4
+            // uxYear
             // 
-            this.textBox4.Location = new System.Drawing.Point(55, 189);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.uxYear.Location = new System.Drawing.Point(55, 189);
+            this.uxYear.Name = "uxYear";
+            this.uxYear.Size = new System.Drawing.Size(100, 20);
+            this.uxYear.TabIndex = 3;
             // 
-            // textBox5
+            // labelName
             // 
-            this.textBox5.Location = new System.Drawing.Point(225, 188);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 4;
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(66, 33);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(66, 13);
+            this.labelName.TabIndex = 6;
+            this.labelName.Text = "Game Name";
             // 
-            // textBox6
+            // labelConsole
             // 
-            this.textBox6.Location = new System.Drawing.Point(400, 188);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
+            this.labelConsole.AutoSize = true;
+            this.labelConsole.Location = new System.Drawing.Point(234, 33);
+            this.labelConsole.Name = "labelConsole";
+            this.labelConsole.Size = new System.Drawing.Size(76, 13);
+            this.labelConsole.TabIndex = 7;
+            this.labelConsole.Text = "Console Name";
             // 
-            // label1
+            // labelGenre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Name";
+            this.labelGenre.AutoSize = true;
+            this.labelGenre.Location = new System.Drawing.Point(413, 33);
+            this.labelGenre.Name = "labelGenre";
+            this.labelGenre.Size = new System.Drawing.Size(67, 13);
+            this.labelGenre.TabIndex = 8;
+            this.labelGenre.Text = "Genre Name";
             // 
-            // label2
+            // labelYear
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(234, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Console Name";
+            this.labelYear.AutoSize = true;
+            this.labelYear.Location = new System.Drawing.Point(66, 173);
+            this.labelYear.Name = "labelYear";
+            this.labelYear.Size = new System.Drawing.Size(71, 13);
+            this.labelYear.TabIndex = 9;
+            this.labelYear.Text = "Release Year";
             // 
-            // label3
+            // uxSubmit
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(413, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Genre Name";
+            this.uxSubmit.Location = new System.Drawing.Point(62, 240);
+            this.uxSubmit.Name = "uxSubmit";
+            this.uxSubmit.Size = new System.Drawing.Size(75, 23);
+            this.uxSubmit.TabIndex = 12;
+            this.uxSubmit.Text = "Submit";
+            this.uxSubmit.UseVisualStyleBackColor = true;
+            this.uxSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label4
+            // labelCountry
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 173);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Release Year";
+            this.labelCountry.AutoSize = true;
+            this.labelCountry.Location = new System.Drawing.Point(83, 101);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(43, 13);
+            this.labelCountry.TabIndex = 14;
+            this.labelCountry.Text = "Country";
             // 
-            // label5
+            // uxCountry
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(234, 172);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Publisher Name";
+            this.uxCountry.Location = new System.Drawing.Point(55, 117);
+            this.uxCountry.Name = "uxCountry";
+            this.uxCountry.Size = new System.Drawing.Size(100, 20);
+            this.uxCountry.TabIndex = 13;
             // 
-            // label6
+            // uxPub
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(413, 172);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Developer Name";
+            this.uxPub.Location = new System.Drawing.Point(225, 117);
+            this.uxPub.Name = "uxPub";
+            this.uxPub.Size = new System.Drawing.Size(100, 20);
+            this.uxPub.TabIndex = 4;
             // 
-            // button1
+            // uxDev
             // 
-            this.button1.Location = new System.Drawing.Point(237, 245);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.uxDev.Location = new System.Drawing.Point(400, 117);
+            this.uxDev.Name = "uxDev";
+            this.uxDev.Size = new System.Drawing.Size(100, 20);
+            this.uxDev.TabIndex = 5;
             // 
-            // label7
+            // labelPub
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(83, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Country";
+            this.labelPub.AutoSize = true;
+            this.labelPub.Location = new System.Drawing.Point(234, 101);
+            this.labelPub.Name = "labelPub";
+            this.labelPub.Size = new System.Drawing.Size(81, 13);
+            this.labelPub.TabIndex = 10;
+            this.labelPub.Text = "Publisher Name";
             // 
-            // textBox7
+            // labelDev
             // 
-            this.textBox7.Location = new System.Drawing.Point(55, 117);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 13;
+            this.labelDev.AutoSize = true;
+            this.labelDev.Location = new System.Drawing.Point(413, 101);
+            this.labelDev.Name = "labelDev";
+            this.labelDev.Size = new System.Drawing.Size(87, 13);
+            this.labelDev.TabIndex = 11;
+            this.labelDev.Text = "Developer Name";
             // 
             // AddView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 295);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(548, 295);
+            this.Controls.Add(this.labelCountry);
+            this.Controls.Add(this.uxCountry);
+            this.Controls.Add(this.uxSubmit);
+            this.Controls.Add(this.labelDev);
+            this.Controls.Add(this.labelPub);
+            this.Controls.Add(this.labelYear);
+            this.Controls.Add(this.labelGenre);
+            this.Controls.Add(this.labelConsole);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.uxDev);
+            this.Controls.Add(this.uxPub);
+            this.Controls.Add(this.uxYear);
+            this.Controls.Add(this.uxGenre);
+            this.Controls.Add(this.uxConsole);
+            this.Controls.Add(this.uxName);
             this.Name = "AddView";
             this.Text = "Add Game";
             this.ResumeLayout(false);
@@ -195,20 +196,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox uxName;
+        private System.Windows.Forms.TextBox uxConsole;
+        private System.Windows.Forms.TextBox uxGenre;
+        private System.Windows.Forms.TextBox uxYear;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelConsole;
+        private System.Windows.Forms.Label labelGenre;
+        private System.Windows.Forms.Label labelYear;
+        private System.Windows.Forms.Button uxSubmit;
+        private System.Windows.Forms.Label labelCountry;
+        private System.Windows.Forms.TextBox uxCountry;
+        private System.Windows.Forms.TextBox uxPub;
+        private System.Windows.Forms.TextBox uxDev;
+        private System.Windows.Forms.Label labelPub;
+        private System.Windows.Forms.Label labelDev;
     }
 }
