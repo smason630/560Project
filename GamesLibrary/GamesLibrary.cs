@@ -22,9 +22,9 @@ namespace GamesLibrary
         static string scottcon = "Data Source=PC\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
         static string ferncon = "Data Source=OMNIUS\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
         static string zackcon = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TeamProject;Integrated Security=True";
-        SqlConnection connection = new SqlConnection(scottcon);
+        SqlConnection connection = new SqlConnection(zackcon);
         //this should work but it doesn't....
-        string query = "SELECT g.Name AS 'Game Name', g.Rating, pg.PublishDate AS 'Publish Year', gen.Name AS 'Genre', c.Name AS 'Console', p.Name AS 'Publisher Name', d.Name AS 'Developer Name' " +
+        string query = "SELECT g.GameName AS 'Game Name', g.Rating, pg.PublishDate AS 'Publish Year', gen.GenreName AS 'Genre', c.ConsoleName AS 'Console', p.PublisherName AS 'Publisher Name', d.DeveloperName AS 'Developer Name' " +
             "FROM GamesLibrary.Games g " + "INNER JOIN GamesLibrary.Genre gen ON gen.GenreId = g.GenreId " + "INNER JOIN GamesLibrary.Console c ON c.ConsoleId = g.ConsoleId " +
             "INNER JOIN GamesLibrary.PublishedGame pg ON pg.GameId = g.GameId " + "INNER JOIN GamesLibrary.Publisher p ON p.PublisherId = pg.PublisherId " +
             "INNER JOIN GamesLibrary.Developer d ON d.DeveloperId = pg.DeveloperId " + "ORDER BY g.GameId";
@@ -54,7 +54,7 @@ namespace GamesLibrary
         private DataTable GetDataSource(string sql)
         {
             DataTable table = new DataTable();
-            using (SqlConnection connection = new SqlConnection(scottcon))
+            using (SqlConnection connection = new SqlConnection(zackcon))
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(sql, connection);
@@ -76,13 +76,13 @@ namespace GamesLibrary
         private void UX_PublisherButton_Click(object sender, EventArgs e)
         {
             state = 1;
-            uxTable.DataSource = GetDataSource("SELECT p.Name AS 'Publisher Name' FROM GamesLibrary.Publisher p");
+            uxTable.DataSource = GetDataSource("SELECT p.PublisherName AS 'Publisher Name', p.Country AS 'Country of Origin' FROM GamesLibrary.Publisher p");
         }
 
         private void UX_DeveloperButton_Click(object sender, EventArgs e)
         {
             state = 2;
-            uxTable.DataSource = GetDataSource("SELECT d.Name AS 'Developer Name' FROM GamesLibrary.Developer d");
+            uxTable.DataSource = GetDataSource("SELECT d.DeveloperName AS 'Developer Name', d.Country AS 'Country of Origin' FROM GamesLibrary.Developer d");
         }
 
         private void UX_SearchButton_Click(object sender, EventArgs e)
@@ -93,13 +93,19 @@ namespace GamesLibrary
             switch(state)
             {
                 case 0:
-                    uxTable.DataSource = GetDataSource("SELECT g.Name AS 'Game Name' FROM GamesLibrary.Games g WHERE [Name] LIKE '%" + search + "%'");
+                    uxTable.DataSource = GetDataSource("SELECT g.GameName AS 'Game Name', g.Rating, pg.PublishDate AS 'Publish Year', gen.GenreName AS 'Genre', c.ConsoleName AS 'Console', p.PublisherName AS 'Publisher Name', d.DeveloperName AS 'Developer Name' " +
+                        "FROM GamesLibrary.Games g " + "INNER JOIN GamesLibrary.Genre gen ON gen.GenreId = g.GenreId " +
+                        "INNER JOIN GamesLibrary.Console c ON c.ConsoleId = g.ConsoleId " +
+                        "INNER JOIN GamesLibrary.PublishedGame pg ON pg.GameId = g.GameId " +
+                        "INNER JOIN GamesLibrary.Publisher p ON p.PublisherId = pg.PublisherId " +
+                        "INNER JOIN GamesLibrary.Developer d ON d.DeveloperId = pg.DeveloperId " +
+                        "WHERE GameName LIKE '%" + search + "%' OR Rating LIKE '%" + search + "%' OR PublishDate LIKE '%" + search + "%' OR GenreName LIKE '%" + search + "%' OR ConsoleName LIKE '%" + search + "%' OR PublisherName LIKE '%" + search + "%' OR DeveloperName LIKE '%" + search + "%'");
                     break;
                 case 1:
-                    uxTable.DataSource = GetDataSource("SELECT p.Name AS 'Publisher Name' FROM GamesLibrary.Publisher p WHERE [Name] LIKE '%" + search + "%'");
+                    uxTable.DataSource = GetDataSource("SELECT p.PublisherName AS 'Publisher Name', p.Country AS 'Country of Origin' FROM GamesLibrary.Publisher p WHERE [Name] LIKE '%" + search + "%' OR [Country] LIKE '%" + search + "%'");
                     break;
                 case 2:
-                    uxTable.DataSource = GetDataSource("SELECT d.Name AS 'Developer Name' FROM GamesLibrary.Developer d WHERE [Name] LIKE '%" + search + "%'");
+                    uxTable.DataSource = GetDataSource("SELECT d.PublisherName AS 'Developer Name', d.Country AS 'Country of Origin' FROM GamesLibrary.Developer d WHERE [Name] LIKE '%" + search + "%' OR [Country] LIKE '%" + search + "%'");
                     break;
             }
         }
