@@ -51,7 +51,7 @@ namespace GamesLibrary
         private DataTable GetDataSource(string sql)
         {
             DataTable table = new DataTable();
-            using (SqlConnection connection = new SqlConnection(zackcon))
+            using (SqlConnection connection = new SqlConnection(scottcon))
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(sql, connection);

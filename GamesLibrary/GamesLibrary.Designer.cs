@@ -72,14 +72,14 @@
             // 
             // UX_SearchBar
             // 
-            this.UX_SearchBar.Location = new System.Drawing.Point(662, 28);
+            this.UX_SearchBar.Location = new System.Drawing.Point(672, 28);
             this.UX_SearchBar.Name = "UX_SearchBar";
             this.UX_SearchBar.Size = new System.Drawing.Size(100, 20);
             this.UX_SearchBar.TabIndex = 5;
             // 
             // UX_SearchButton
             // 
-            this.UX_SearchButton.Location = new System.Drawing.Point(768, 27);
+            this.UX_SearchButton.Location = new System.Drawing.Point(778, 27);
             this.UX_SearchButton.Name = "UX_SearchButton";
             this.UX_SearchButton.Size = new System.Drawing.Size(75, 20);
             this.UX_SearchButton.TabIndex = 6;
@@ -160,7 +160,7 @@
             this.uxTable.Location = new System.Drawing.Point(12, 66);
             this.uxTable.Name = "uxTable";
             this.uxTable.ReadOnly = true;
-            this.uxTable.Size = new System.Drawing.Size(750, 414);
+            this.uxTable.Size = new System.Drawing.Size(760, 414);
             this.uxTable.TabIndex = 13;
             // 
             // GamesLibrary
