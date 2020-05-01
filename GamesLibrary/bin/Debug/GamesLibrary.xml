@@ -9,7 +9,7 @@
             Default implementation
             </summary>
         </member>
-        <member name="M:GamesLibrary.AddView.#ctor">
+        <member name="M:GamesLibrary.AddView.#ctor(System.Int32)">
             <summary>
             Default implementation
             </summary>
