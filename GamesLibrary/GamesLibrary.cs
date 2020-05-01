@@ -59,6 +59,7 @@ namespace GamesLibrary
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.FillSchema(table,SchemaType.Source);
                 da.Fill(table);
+                connection.Close();
             }
 
             return table;
@@ -68,18 +69,21 @@ namespace GamesLibrary
         {
             state = 0;
             uxTable.DataSource = GetDataSource(query);
+            UX_AddButton.Text = "Add Game";
         }
 
         private void UX_PublisherButton_Click(object sender, EventArgs e)
         {
             state = 1;
             uxTable.DataSource = GetDataSource("SELECT p.PublisherName AS 'Publisher Name', p.Country AS 'Country of Origin' FROM GamesLibrary.Publisher p");
+            UX_AddButton.Text = "Add Publisher";
         }
 
         private void UX_DeveloperButton_Click(object sender, EventArgs e)
         {
             state = 2;
             uxTable.DataSource = GetDataSource("SELECT d.DeveloperName AS 'Developer Name', d.Country AS 'Country of Origin' FROM GamesLibrary.Developer d");
+            UX_AddButton.Text = "Add Developer";
         }
 
         private void UX_SearchButton_Click(object sender, EventArgs e)
