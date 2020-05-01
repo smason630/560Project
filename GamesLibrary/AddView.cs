@@ -26,7 +26,7 @@ namespace GamesLibrary
         public AddView(int passedState)
         {
             InitializeComponent();
-            using (SqlConnection connection = new SqlConnection(scottcon))
+            using (SqlConnection connection = new SqlConnection(ferncon))
             {
                 connection.Open();
                 string st = "SELECT * FROM GamesLibrary.Genre";
@@ -112,7 +112,7 @@ namespace GamesLibrary
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(scottcon))
+            using (SqlConnection connection = new SqlConnection(ferncon))
             {
                 connection.Open();
                 if (state == 1)

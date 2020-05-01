@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GamesLibrary",
-    "\\GamesLibrary\\DataAccess"
+    "\\GamesLibrary"
   ],
-  "SelectedNode": "\\GamesLibrary\\GamesLibrary.sln",
+  "SelectedNode": "\\GamesLibrary\\DataAccess",
   "PreviewInSolutionExplorer": false
 }
