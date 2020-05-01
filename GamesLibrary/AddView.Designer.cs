@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.uxName = new System.Windows.Forms.TextBox();
-            this.uxConsole = new System.Windows.Forms.TextBox();
-            this.uxGenre = new System.Windows.Forms.TextBox();
             this.uxYear = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
             this.labelConsole = new System.Windows.Forms.Label();
@@ -38,11 +36,15 @@
             this.labelYear = new System.Windows.Forms.Label();
             this.uxSubmit = new System.Windows.Forms.Button();
             this.labelCountry = new System.Windows.Forms.Label();
-            this.uxCountry = new System.Windows.Forms.TextBox();
-            this.uxPub = new System.Windows.Forms.TextBox();
-            this.uxDev = new System.Windows.Forms.TextBox();
             this.labelPub = new System.Windows.Forms.Label();
             this.labelDev = new System.Windows.Forms.Label();
+            this.uxGenre = new System.Windows.Forms.ComboBox();
+            this.uxConsole = new System.Windows.Forms.ComboBox();
+            this.uxCountry = new System.Windows.Forms.ComboBox();
+            this.uxPublisher = new System.Windows.Forms.ComboBox();
+            this.uxDeveloper = new System.Windows.Forms.ComboBox();
+            this.uxRating = new System.Windows.Forms.ComboBox();
+            this.labelRating = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uxName
@@ -51,20 +53,6 @@
             this.uxName.Name = "uxName";
             this.uxName.Size = new System.Drawing.Size(100, 20);
             this.uxName.TabIndex = 0;
-            // 
-            // uxConsole
-            // 
-            this.uxConsole.Location = new System.Drawing.Point(225, 49);
-            this.uxConsole.Name = "uxConsole";
-            this.uxConsole.Size = new System.Drawing.Size(100, 20);
-            this.uxConsole.TabIndex = 1;
-            // 
-            // uxGenre
-            // 
-            this.uxGenre.Location = new System.Drawing.Point(400, 49);
-            this.uxGenre.Name = "uxGenre";
-            this.uxGenre.Size = new System.Drawing.Size(100, 20);
-            this.uxGenre.TabIndex = 2;
             // 
             // uxYear
             // 
@@ -128,27 +116,6 @@
             this.labelCountry.TabIndex = 14;
             this.labelCountry.Text = "Country";
             // 
-            // uxCountry
-            // 
-            this.uxCountry.Location = new System.Drawing.Point(55, 117);
-            this.uxCountry.Name = "uxCountry";
-            this.uxCountry.Size = new System.Drawing.Size(100, 20);
-            this.uxCountry.TabIndex = 13;
-            // 
-            // uxPub
-            // 
-            this.uxPub.Location = new System.Drawing.Point(225, 117);
-            this.uxPub.Name = "uxPub";
-            this.uxPub.Size = new System.Drawing.Size(100, 20);
-            this.uxPub.TabIndex = 4;
-            // 
-            // uxDev
-            // 
-            this.uxDev.Location = new System.Drawing.Point(400, 117);
-            this.uxDev.Name = "uxDev";
-            this.uxDev.Size = new System.Drawing.Size(100, 20);
-            this.uxDev.TabIndex = 5;
-            // 
             // labelPub
             // 
             this.labelPub.AutoSize = true;
@@ -167,13 +134,83 @@
             this.labelDev.TabIndex = 11;
             this.labelDev.Text = "Developer Name";
             // 
+            // uxGenre
+            // 
+            this.uxGenre.FormattingEnabled = true;
+            this.uxGenre.Location = new System.Drawing.Point(390, 48);
+            this.uxGenre.Name = "uxGenre";
+            this.uxGenre.Size = new System.Drawing.Size(121, 21);
+            this.uxGenre.TabIndex = 15;
+            // 
+            // uxConsole
+            // 
+            this.uxConsole.FormattingEnabled = true;
+            this.uxConsole.Location = new System.Drawing.Point(214, 48);
+            this.uxConsole.Name = "uxConsole";
+            this.uxConsole.Size = new System.Drawing.Size(121, 21);
+            this.uxConsole.TabIndex = 16;
+            // 
+            // uxCountry
+            // 
+            this.uxCountry.FormattingEnabled = true;
+            this.uxCountry.Location = new System.Drawing.Point(44, 117);
+            this.uxCountry.Name = "uxCountry";
+            this.uxCountry.Size = new System.Drawing.Size(121, 21);
+            this.uxCountry.TabIndex = 17;
+            // 
+            // uxPublisher
+            // 
+            this.uxPublisher.FormattingEnabled = true;
+            this.uxPublisher.Location = new System.Drawing.Point(214, 117);
+            this.uxPublisher.Name = "uxPublisher";
+            this.uxPublisher.Size = new System.Drawing.Size(121, 21);
+            this.uxPublisher.TabIndex = 18;
+            // 
+            // uxDeveloper
+            // 
+            this.uxDeveloper.FormattingEnabled = true;
+            this.uxDeveloper.Location = new System.Drawing.Point(390, 117);
+            this.uxDeveloper.Name = "uxDeveloper";
+            this.uxDeveloper.Size = new System.Drawing.Size(121, 21);
+            this.uxDeveloper.TabIndex = 19;
+            // 
+            // uxRating
+            // 
+            this.uxRating.FormattingEnabled = true;
+            this.uxRating.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.uxRating.Location = new System.Drawing.Point(214, 188);
+            this.uxRating.Name = "uxRating";
+            this.uxRating.Size = new System.Drawing.Size(59, 21);
+            this.uxRating.TabIndex = 20;
+            // 
+            // labelRating
+            // 
+            this.labelRating.AutoSize = true;
+            this.labelRating.Location = new System.Drawing.Point(223, 173);
+            this.labelRating.Name = "labelRating";
+            this.labelRating.Size = new System.Drawing.Size(38, 13);
+            this.labelRating.TabIndex = 21;
+            this.labelRating.Text = "Rating";
+            // 
             // AddView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(548, 295);
-            this.Controls.Add(this.labelCountry);
+            this.Controls.Add(this.labelRating);
+            this.Controls.Add(this.uxRating);
+            this.Controls.Add(this.uxDeveloper);
+            this.Controls.Add(this.uxPublisher);
             this.Controls.Add(this.uxCountry);
+            this.Controls.Add(this.uxConsole);
+            this.Controls.Add(this.uxGenre);
+            this.Controls.Add(this.labelCountry);
             this.Controls.Add(this.uxSubmit);
             this.Controls.Add(this.labelDev);
             this.Controls.Add(this.labelPub);
@@ -181,11 +218,7 @@
             this.Controls.Add(this.labelGenre);
             this.Controls.Add(this.labelConsole);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.uxDev);
-            this.Controls.Add(this.uxPub);
             this.Controls.Add(this.uxYear);
-            this.Controls.Add(this.uxGenre);
-            this.Controls.Add(this.uxConsole);
             this.Controls.Add(this.uxName);
             this.Name = "AddView";
             this.Text = "Add Game";
@@ -197,8 +230,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox uxName;
-        private System.Windows.Forms.TextBox uxConsole;
-        private System.Windows.Forms.TextBox uxGenre;
         private System.Windows.Forms.TextBox uxYear;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelConsole;
@@ -206,10 +237,14 @@
         private System.Windows.Forms.Label labelYear;
         private System.Windows.Forms.Button uxSubmit;
         private System.Windows.Forms.Label labelCountry;
-        private System.Windows.Forms.TextBox uxCountry;
-        private System.Windows.Forms.TextBox uxPub;
-        private System.Windows.Forms.TextBox uxDev;
         private System.Windows.Forms.Label labelPub;
         private System.Windows.Forms.Label labelDev;
+        private System.Windows.Forms.ComboBox uxGenre;
+        private System.Windows.Forms.ComboBox uxConsole;
+        private System.Windows.Forms.ComboBox uxCountry;
+        private System.Windows.Forms.ComboBox uxPublisher;
+        private System.Windows.Forms.ComboBox uxDeveloper;
+        private System.Windows.Forms.ComboBox uxRating;
+        private System.Windows.Forms.Label labelRating;
     }
 }

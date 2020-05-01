@@ -51,7 +51,7 @@ namespace GamesLibrary
         private DataTable GetDataSource(string sql)
         {
             DataTable table = new DataTable();
-            using (SqlConnection connection = new SqlConnection(zackcon))
+            using (SqlConnection connection = new SqlConnection(scottcon))
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(sql, connection);
@@ -110,6 +110,7 @@ namespace GamesLibrary
         {
             AddView addForm = new AddView(state);
             addForm.ShowDialog();
+            this.Refresh();
         }
 
         private void UX_GenreDropDown_SelectedIndexChanged(object sender, EventArgs e)
