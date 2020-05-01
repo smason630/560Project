@@ -22,7 +22,6 @@ namespace GamesLibrary
         static string scottcon = "Data Source=PC\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
         static string ferncon = "Data Source=OMNIUS\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
         static string zackcon = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TeamProject;Integrated Security=True";
-        SqlConnection connection = new SqlConnection(zackcon);
         //this should work but it doesn't....
         string query = "SELECT g.GameName AS 'Game Name', g.Rating, pg.PublishDate AS 'Publish Year', gen.GenreName AS 'Genre', c.ConsoleName AS 'Console', p.PublisherName AS 'Publisher Name', d.DeveloperName AS 'Developer Name' " +
             "FROM GamesLibrary.Games g " + "INNER JOIN GamesLibrary.Genre gen ON gen.GenreId = g.GenreId " + "INNER JOIN GamesLibrary.Console c ON c.ConsoleId = g.ConsoleId " +
@@ -90,7 +89,6 @@ namespace GamesLibrary
             switch(state)
             {
                 case 0:
-
                     uxTable.DataSource = GetDataSource("SELECT g.GameName AS 'Game Name', g.Rating, pg.PublishDate AS 'Publish Year', gen.GenreName AS 'Genre', c.ConsoleName AS 'Console', p.PublisherName AS 'Publisher Name', d.DeveloperName AS 'Developer Name' " +
                         "FROM GamesLibrary.Games g " + "INNER JOIN GamesLibrary.Genre gen ON gen.GenreId = g.GenreId " +
                         "INNER JOIN GamesLibrary.Console c ON c.ConsoleId = g.ConsoleId " +
@@ -103,7 +101,7 @@ namespace GamesLibrary
                     uxTable.DataSource = GetDataSource("SELECT p.PublisherName AS 'Publisher Name', p.Country AS 'Country of Origin' FROM GamesLibrary.Publisher p WHERE [Name] LIKE '%" + search + "%' OR [Country] LIKE '%" + search + "%'");
                     break;
                 case 2:
-                    uxTable.DataSource = GetDataSource("SELECT d.PublisherName AS 'Developer Name', d.Country AS 'Country of Origin' FROM GamesLibrary.Developer d WHERE [Name] LIKE '%" + search + "%' OR [Country] LIKE '%" + search + "%'");
+                    uxTable.DataSource = GetDataSource("SELECT d.DeveloperName AS 'Developer Name', d.Country AS 'Country of Origin' FROM GamesLibrary.Developer d WHERE [Name] LIKE '%" + search + "%' OR [Country] LIKE '%" + search + "%'");
                     break;
             }
         }
@@ -113,6 +111,25 @@ namespace GamesLibrary
             AddView addForm = new AddView(state);
             addForm.ShowDialog();
         }
-       
+
+        private void UX_GenreDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            uxTable.DataSource = GetDataSource("SELECT g.GameName AS 'Game Name', g.Rating, pg.PublishDate AS 'Publish Year', gen.GenreName AS 'Genre', c.ConsoleName AS 'Console', p.PublisherName AS 'Publisher Name', d.DeveloperName AS 'Developer Name' " +
+                        "FROM GamesLibrary.Games g " + "INNER JOIN GamesLibrary.Genre gen ON gen.GenreId = g.GenreId " +
+                        "INNER JOIN GamesLibrary.Console c ON c.ConsoleId = g.ConsoleId " +
+                        "INNER JOIN GamesLibrary.PublishedGame pg ON pg.GameId = g.GameId " +
+                        "INNER JOIN GamesLibrary.Publisher p ON p.PublisherId = pg.PublisherId " +
+                        "INNER JOIN GamesLibrary.Developer d ON d.DeveloperId = pg.DeveloperId WHERE GenreName LIKE '%" + UX_GenreDropDown.Text + "%'");
+        }
+
+        private void UX_ConsoleDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            uxTable.DataSource = GetDataSource("SELECT g.GameName AS 'Game Name', g.Rating, pg.PublishDate AS 'Publish Year', gen.GenreName AS 'Genre', c.ConsoleName AS 'Console', p.PublisherName AS 'Publisher Name', d.DeveloperName AS 'Developer Name' " +
+                        "FROM GamesLibrary.Games g " + "INNER JOIN GamesLibrary.Genre gen ON gen.GenreId = g.GenreId " +
+                        "INNER JOIN GamesLibrary.Console c ON c.ConsoleId = g.ConsoleId " +
+                        "INNER JOIN GamesLibrary.PublishedGame pg ON pg.GameId = g.GameId " +
+                        "INNER JOIN GamesLibrary.Publisher p ON p.PublisherId = pg.PublisherId " +
+                        "INNER JOIN GamesLibrary.Developer d ON d.DeveloperId = pg.DeveloperId WHERE ConsoleName LIKE '%" + UX_ConsoleDropDown.Text + "%'");
+        }
     }
 }

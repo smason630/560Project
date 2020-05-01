@@ -108,6 +108,7 @@
             this.UX_GenreDropDown.Name = "UX_GenreDropDown";
             this.UX_GenreDropDown.Size = new System.Drawing.Size(97, 21);
             this.UX_GenreDropDown.TabIndex = 9;
+            this.UX_GenreDropDown.SelectedIndexChanged += new System.EventHandler(this.UX_GenreDropDown_SelectedIndexChanged);
             // 
             // UX_ConsoleDropDown
             // 
@@ -140,6 +141,7 @@
             this.UX_ConsoleDropDown.Name = "UX_ConsoleDropDown";
             this.UX_ConsoleDropDown.Size = new System.Drawing.Size(97, 21);
             this.UX_ConsoleDropDown.TabIndex = 10;
+            this.UX_ConsoleDropDown.SelectedIndexChanged += new System.EventHandler(this.UX_ConsoleDropDown_SelectedIndexChanged);
             // 
             // UX_AddButton
             // 
