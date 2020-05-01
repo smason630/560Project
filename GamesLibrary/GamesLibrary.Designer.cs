@@ -153,6 +153,7 @@
             // 
             // uxTable
             // 
+            this.uxTable.BackgroundColor = System.Drawing.SystemColors.Control;
             this.uxTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uxTable.Location = new System.Drawing.Point(12, 66);
             this.uxTable.Name = "uxTable";
