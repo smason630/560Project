@@ -51,7 +51,7 @@ namespace GamesLibrary
         private DataTable GetDataSource(string sql)
         {
             DataTable table = new DataTable();
-            using (SqlConnection connection = new SqlConnection(scottcon))
+            using (SqlConnection connection = new SqlConnection(zackcon))
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(sql, connection);
@@ -98,10 +98,10 @@ namespace GamesLibrary
                         "WHERE GameName LIKE '%" + search + "%' OR Rating LIKE '%" + search + "%' OR PublishDate LIKE '%" + search + "%' OR GenreName LIKE '%" + search + "%' OR ConsoleName LIKE '%" + search + "%' OR PublisherName LIKE '%" + search + "%' OR DeveloperName LIKE '%" + search + "%'");
                     break;
                 case 1:
-                    uxTable.DataSource = GetDataSource("SELECT p.PublisherName AS 'Publisher Name', p.Country AS 'Country of Origin' FROM GamesLibrary.Publisher p WHERE [Name] LIKE '%" + search + "%' OR [Country] LIKE '%" + search + "%'");
+                    uxTable.DataSource = GetDataSource("SELECT p.PublisherName AS 'Publisher Name', p.Country AS 'Country of Origin' FROM GamesLibrary.Publisher p WHERE [PublisherName] LIKE '%" + search + "%' OR [Country] LIKE '%" + search + "%'");
                     break;
                 case 2:
-                    uxTable.DataSource = GetDataSource("SELECT d.DeveloperName AS 'Developer Name', d.Country AS 'Country of Origin' FROM GamesLibrary.Developer d WHERE [Name] LIKE '%" + search + "%' OR [Country] LIKE '%" + search + "%'");
+                    uxTable.DataSource = GetDataSource("SELECT d.DeveloperName AS 'Developer Name', d.Country AS 'Country of Origin' FROM GamesLibrary.Developer d WHERE [DeveloperName] LIKE '%" + search + "%' OR [Country] LIKE '%" + search + "%'");
                     break;
             }
         }

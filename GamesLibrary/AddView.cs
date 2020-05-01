@@ -17,6 +17,8 @@ namespace GamesLibrary
     public partial class AddView : Form
     {
         static string scottcon = "Data Source=PC\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
+        static string ferncon = "Data Source=OMNIUS\\SQLEXPRESS;Initial Catalog=TeamProject;Integrated Security=True";
+        static string zackcon = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TeamProject;Integrated Security=True";
         int state;
         /// <summary>
         /// Default implementation
@@ -24,7 +26,7 @@ namespace GamesLibrary
         public AddView(int passedState)
         {
             InitializeComponent();
-            using (SqlConnection connection = new SqlConnection(scottcon))
+            using (SqlConnection connection = new SqlConnection(zackcon))
             {
                 connection.Open();
                 string st = "SELECT * FROM GamesLibrary.Genre";
@@ -110,7 +112,7 @@ namespace GamesLibrary
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(scottcon))
+            using (SqlConnection connection = new SqlConnection(zackcon))
             {
                 connection.Open();
                 if (state == 1)
