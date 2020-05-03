@@ -57,7 +57,7 @@ namespace GamesLibrary
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.FillSchema(table,SchemaType.Source);
+                da.FillSchema(table, SchemaType.Source);
                 da.Fill(table);
                 connection.Close();
             }
@@ -90,7 +90,7 @@ namespace GamesLibrary
         {
             string search = UX_SearchBar.Text;
             //this switch might work for the search bar but it doesn't work now... not sure how to use a variable from c# in the sql command
-            switch(state)
+            switch (state)
             {
                 case 0:
                     uxTable.DataSource = GetDataSource("SELECT g.GameName AS 'Game Name', g.Rating, pg.PublishDate AS 'Publish Year', gen.GenreName AS 'Genre', c.ConsoleName AS 'Console', p.PublisherName AS 'Publisher Name', d.DeveloperName AS 'Developer Name' " +

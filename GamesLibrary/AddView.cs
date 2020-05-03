@@ -69,8 +69,8 @@ namespace GamesLibrary
                     uxCountry.Items.Add(rdr[0].ToString());
                 }
             }
-                state = passedState;
-            if (state == 1 )
+            state = passedState;
+            if (state == 1)
             {
                 labelGenre.Visible = false;
                 labelConsole.Visible = false;
@@ -83,11 +83,11 @@ namespace GamesLibrary
                 uxDeveloper.Visible = false;
                 uxRating.Visible = false;
 
-                labelPub.Location = new Point(66,33);
+                labelPub.Location = new Point(66, 33);
                 uxPublisher.Location = new Point(44, 50);
                 uxSubmit.Location = new Point(62, 240);
             }
-            else if(state == 2)
+            else if (state == 2)
             {
                 labelGenre.Visible = false;
                 labelConsole.Visible = false;
