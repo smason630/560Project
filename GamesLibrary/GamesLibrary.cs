@@ -38,6 +38,15 @@ namespace GamesLibrary
         {
             InitializeComponent();
         }
+
+        public AddView AddView
+        {
+            get => default(GamesLibrary.AddView);
+            set
+            {
+            }
+        }
+
         /// <summary>
         /// doesnt do anything, fernando added this
         /// </summary>
