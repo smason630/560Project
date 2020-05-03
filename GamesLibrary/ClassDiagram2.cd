@@ -10,12 +10,9 @@
   <Class Name="GamesLibrary.GamesLibrary">
     <Position X="2.25" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>QACCAABAACEBASgQGEiAAAACBAIhgBQEAAQIQACEBAA=</HashCode>
+      <HashCode>QACCAABAACEBASAQGEiAAAACBAIhgBQEAAQIQACEBAA=</HashCode>
       <FileName>GamesLibrary.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="AddView" />
-    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
