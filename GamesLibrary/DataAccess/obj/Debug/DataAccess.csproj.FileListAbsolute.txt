@@ -1,6 +1,0 @@
-C:\Users\fvela\Source\Repos\560Project\GamesLibrary\DataAccess\bin\Debug\DataAccess.dll
-C:\Users\fvela\Source\Repos\560Project\GamesLibrary\DataAccess\bin\Debug\DataAccess.pdb
-C:\Users\fvela\Source\Repos\560Project\GamesLibrary\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
-C:\Users\fvela\Source\Repos\560Project\GamesLibrary\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\fvela\Source\Repos\560Project\GamesLibrary\DataAccess\obj\Debug\DataAccess.dll
-C:\Users\fvela\Source\Repos\560Project\GamesLibrary\DataAccess\obj\Debug\DataAccess.pdb

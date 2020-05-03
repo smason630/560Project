@@ -54,20 +54,12 @@
     <Compile Include="AddView.Designer.cs">
       <DependentUpon>AddView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Console.cs" />
-    <Compile Include="Models\Developer.cs" />
-    <Compile Include="Models\Game.cs" />
-    <Compile Include="Controller.cs" />
     <Compile Include="GamesLibrary.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GamesLibrary.Designer.cs">
       <DependentUpon>GamesLibrary.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddHandler.cs" />
-    <Compile Include="GamesLibraryHandler.cs" />
-    <Compile Include="Models\Genre.cs" />
-    <Compile Include="Models\Publisher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddView.resx">
