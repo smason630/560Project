@@ -110,7 +110,7 @@ namespace GamesLibrary
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void OnSubmitClick(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(ferncon))
             {

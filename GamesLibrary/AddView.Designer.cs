@@ -112,7 +112,7 @@
             this.uxSubmit.TabIndex = 12;
             this.uxSubmit.Text = "Submit";
             this.uxSubmit.UseVisualStyleBackColor = true;
-            this.uxSubmit.Click += new System.EventHandler(this.button1_Click);
+            this.uxSubmit.Click += new System.EventHandler(this.OnSubmitClick);
             // 
             // labelCountry
             // 
